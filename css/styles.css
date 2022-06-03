@@ -47,6 +47,16 @@ ul {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.image {
+  display: block;
+}
+.title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.14;
+  /*text-transform: uppercase;*/
+}
 .logo.link.header {
   display: block;
   padding-top: 24px;
@@ -75,7 +85,7 @@ ul {
   text-align: center;
 }
 
-.section.work {
+.work-section {
   padding-top: 0px;
 }
 .address {
@@ -95,33 +105,33 @@ ul {
   margin-left: 8px;
 }
 /*Задает расположение на раздел Наши преимущества*/
-.list.benefits {
+.benefits__list {
   display: flex;
 }
-.list.benefits .item + .item {
+.benefits__list .benefits__item + .benefits__item {
   margin-left: 30px;
 }
 /*Задает размер поля для текста в Наши преимущества*/
-.list.benefits .item {
+.benefits__list .benefits__item {
   width: 270px;
 }
 /*Задает расположение на раздел Чем мы занимаемся*/
-.list.work {
+.work__list {
   display: flex;
 }
-.list.work .item + .item {
+.work__list .work__item + .work__item {
   margin-left: 30px;
 }
 /*======================
 Заголовки картинок в Чем мы занимаемся
 ========================*/
-.title.image {
+.work__title-image {
   color: var(--white-color);
   text-transform: uppercase;
   text-align: center;
 }
 
-.title-thumb {
+.work__thumb {
   width: 370px;
   height: 70px;
 
@@ -132,14 +142,15 @@ ul {
   align-items: center;
   bottom: 0;
 }
-.title-thumb {
+.work__thumb {
   position: absolute;
 }
 /*Задаем позицию предку для выравнивания заголовка*/
-.item.work {
+.work__item {
   position: relative;
 }
-.image {
+
+.work__image {
   display: block;
 }
 /*==========================================
@@ -337,14 +348,8 @@ ul {
 }
 
 /* section */
-.title {
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: inherit;
-  line-height: 1.14;
-  /*text-transform: uppercase;*/
-}
-.title-benefits {
+
+.benefits__title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: inherit;
@@ -361,7 +366,7 @@ ul {
 }
 
 /* Класс скрывает семантический заголовок*/
-.title-never {
+.benefits__title.never {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -387,9 +392,21 @@ ul {
   font-size: 16px;
   line-height: 1.88;
 }
-.title.work,
-.title.team,
-.title.clients {
+.title.team {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.clients__title {
+  argin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.work__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -589,7 +606,7 @@ ul {
   margin-right: 10px;
 }
 /*Иконки в наших приемуществах*/
-.icon-background {
+.benefits__icon {
   background-color: #f5f4fa;
   display: flex;
   justify-content: center;
@@ -641,13 +658,13 @@ ul {
 
 /*Иконки наши клиенты*/
 
-.list.clients {
+.clients__list {
   display: flex;
   justify-content: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.link.clients {
+.clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -661,18 +678,18 @@ ul {
 
   transition: color 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
-.link.clients:hover {
+.clients__link:hover {
   border-color: #2196f3;
   color: #2196f3;
 }
-.icon-clients {
+.clients__icon {
   fill: currentColor;
 }
-.item.clients {
+.clients__item {
   margin-right: 30px;
 }
 
-.item.clients:last-child {
+.clients__item:last-child {
   margin-right: 0;
 }
 /*Стилизация ссылок ф футере соц.сети*/
