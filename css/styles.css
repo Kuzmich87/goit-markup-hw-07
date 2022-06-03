@@ -15,11 +15,34 @@
   --white-color: #ffffff;
   --second-white-color: #f5f4fa;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient: rgba(47, 48, 58, 0.4);
+  --work-thumb-background: rgba(47, 48, 58, 0.8);
+  --button-primary-hover-color: #188ce8;
+  --contacts-sup-color: rgba(255, 255, 255, 0.6);
+  --social-link-footer-color: rgba(255, 255, 255, 0.1);
+  --header-border-color: #eeeeee;
+  --footer-color: #2f303a;
+  --hero-color: #2f303a;
+  --grey-color: #afb1b8;
+  --border-input-color: rgba(255, 255, 255, 0.3);
+  --shadow-input-color: rgba(0, 0, 0, 0.15);
+  --footer-input-placeholder-color: rgba(255, 255, 255, 0.6);
+  --card-overlay-color: rgba(33, 150, 243, 0.9);
+  --backdrop-color: rgba(0, 0, 0, 0.2);
+  --button-closed-border-color: rgba(0, 0, 0, 0.1);
+  --form-input-border-color: rgba(33, 33, 33, 0.2);
+  --textarea-placeholder-color: rgba(117, 117, 117, 0.5);
+  --button-submit-shadow-color: rgba(0, 0, 0, 0.15);
+  --primary-font-family: Roboto;
+  --logo-font-family: Raleway;
+  --secondary-font-family: helvetica;
+  --arial-font-family: arial;
 }
 
 body {
   color: var(--primary-text-color);
-  font-family: Roboto, helvetica, arial, sans-serif;
+  font-family: var(--primary-font-family), var(--secondary-font-family), var(--arial-font-family),
+    sans-serif;
   background-color: var(--white-color);
   letter-spacing: 0.03em;
   font-size: 14px;
@@ -70,13 +93,13 @@ ul {
 .section.hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #2f303a;
+  background-color: var(--hero-color);
 
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(to right, var(--gradient), var(--gradient)),
     url('..//images/webstudio/hero.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -135,7 +158,7 @@ ul {
   width: 370px;
   height: 70px;
 
-  background: rgba(47, 48, 58, 0.8);
+  background: var(--work-thumb-background);
 
   display: flex;
   justify-content: center;
@@ -190,7 +213,7 @@ ul {
 .conteiner-team {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #ffffff;
+  background-color: var(--white-color);
 }
 .img {
   display: block;
@@ -219,7 +242,7 @@ ul {
 /* Класс на цвет логотипа*/
 .logo {
   color: var(--accent-color);
-  font-family: Raleway, sans-serif;
+  font-family: var(--logo-font-family), sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -379,6 +402,19 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.title-never {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /*.text-benefits {
   font-size: 14px;
   line-height: 1.71;
@@ -482,11 +518,11 @@ ul {
 }
 .button.primary:hover,
 .button.primary:focus {
-  background-color: #188ce8;
+  background-color: var(--button-primary-hover-color);
 }
 /*Задает цвет выделенной кнопки фильтра*/
 .list .button.current {
-  background-color: #2196f3;
+  background-color: var(--accent-color);
   color: var(--white-color);
 }
 /*Задают размеры кнопок фильтра*/
@@ -521,7 +557,7 @@ ul {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: #757575;
+  color: var(--primary-text-color);
 
   transition: color 250ms var(--timing-function);
 }
@@ -541,7 +577,7 @@ ul {
   margin-left: 50px;
 }
 .contacts-sup .link {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--contacts-sup-color);
   font-style: normal;
   /*font-weight: 400;
   font-size: 14px;
@@ -567,12 +603,12 @@ ul {
 }
 /*Border headera на странице портфолио*/
 .section-header.border {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--header-border-color);
 }
 .border {
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid var(--header-border-color);
+  border-right: 1px solid var(--header-border-color);
+  border-bottom: 1px solid var(--header-border-color);
 }
 .section.team {
   background-color: var(--second-white-color);
@@ -582,7 +618,7 @@ ul {
   padding-top: 60px;
   padding-bottom: 60px;
 
-  background-color: #2f303a;
+  background-color: var(--footer-color);
 }
 
 .flex.footer {
@@ -607,7 +643,7 @@ ul {
 }
 /*Иконки в наших приемуществах*/
 .benefits__icon {
-  background-color: #f5f4fa;
+  background-color: var(--second-white-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -641,7 +677,7 @@ ul {
   height: 44px;
   border-radius: 50%;
 
-  color: #afb1b8;
+  color: var(--grey-color);
   background-color: var(--white-color);
 
   transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
@@ -653,7 +689,7 @@ ul {
 .social.link:hover,
 .social.link:focus {
   color: var(--white-color);
-  background-color: #2196f3;
+  background-color: var(--accent-color);
 }
 
 /*Иконки наши клиенты*/
@@ -671,16 +707,16 @@ ul {
 
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--grey-color);
   border-radius: 4px;
 
-  color: #afb1b8;
+  color: var(--grey-color);
 
   transition: color 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 .clients__link:hover {
-  border-color: #2196f3;
-  color: #2196f3;
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 .clients__icon {
   fill: currentColor;
@@ -708,7 +744,7 @@ ul {
   align-items: center;
   justify-content: center;
   color: var(--white-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--social-link-footer-color);
 
   width: 44px;
   height: 44px;
@@ -720,7 +756,7 @@ ul {
 
 .social-link-footer.link:hover,
 .social-link-footer.link:focus {
-  background-color: #2196f3;
+  background-color: var(--accent-color);
 }
 /*===============================
 
@@ -752,13 +788,13 @@ ul {
   color: var(--white-color);
   background-color: transparent;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  drop-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+  border: 1px solid var(--border-input-color);
+  drop-shadow: (0px 4px 4px var(--shadow-input-color));
   border-radius: 4px;
 }
 
 .footer-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-input-placeholder-color);
 }
 
 .footer-input:hover,
@@ -789,7 +825,7 @@ ul {
 
 .footer-submit:hover,
 .footer-submit:focus {
-  background-color: #188ce8;
+  background-color: var(--button-primary-hover-color);
 }
 
 .icon-footer-form {
@@ -827,8 +863,8 @@ ul {
   font-size: 18px;
   line-height: 1.55;
 
-  color: #ffffff;
-  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--white-color);
+  background-color: var(--card-overlay-color);
 
   transform: translateY(100%);
   transition: transform 250ms var(--timing-function);
@@ -849,7 +885,7 @@ ul {
 
   z-index: 1;
 
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--backdrop-color);
 
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
@@ -897,7 +933,7 @@ ul {
   cursor: pointer;
 
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--button-closed-border-color);
   background-color: transparent;
 
   /*анимация кнопки*/
@@ -905,7 +941,7 @@ ul {
 }
 .button-closed:focus,
 .button-closed:hover {
-  fill: #2196f3;
+  fill: var(--accent-color);
 }
 /*==============================
        Форма в мадальном окне
@@ -957,7 +993,7 @@ ul {
   padding-top: 12px;
   padding-bottom: 12px;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--form-input-border-color);
   border-radius: 4px;
 
   margin-bottom: 10px;
@@ -991,7 +1027,7 @@ ul {
   letter-spacing: 0.01em;
 
   border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--form-input-border-color);
 
   transition: border-color 250ms var(--timing-function);
 }
@@ -1003,7 +1039,7 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--textarea-placeholder-color);
 }
 
 .textarea:focus,
@@ -1080,7 +1116,7 @@ ul {
   border: none;
   cursor: pointer;
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px var(--button-submit-shadow-color);
   border-radius: 4px;
 
   /*анимация кнопки*/
@@ -1089,5 +1125,5 @@ ul {
 
 .button-submit:hover,
 .button-submit:focus {
-  background-color: #188ce8;
+  background-color: var(--button-primary-hover-color);
 }
