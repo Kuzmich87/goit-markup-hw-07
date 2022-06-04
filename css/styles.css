@@ -39,56 +39,10 @@
   --arial-font-family: arial;
 }
 
-body {
-  color: var(--primary-text-color);
-  font-family: var(--primary-font-family), var(--secondary-font-family), var(--arial-font-family),
-    sans-serif;
-  background-color: var(--white-color);
-  letter-spacing: 0.03em;
-  font-size: 14px;
-  line-height: 1.71;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.image {
-  display: block;
-}
-.title {
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: inherit;
-  line-height: 1.14;
-  /*text-transform: uppercase;*/
-}
 .logo.link.header {
   display: block;
   padding-top: 24px;
   padding-bottom: 25px;
-}
-/* позиционирование элементов хедера*/
-.container.header {
-  display: flex;
-  align-items: center;
 }
 .section.hero {
   padding-top: 200px;
@@ -114,10 +68,6 @@ ul {
 .address {
   margin-top: 20px;
 }
-/*.link.contacts {
-  display: inline-block;
-  margin-top: 9px;
-}*/
 .list.filtr {
   display: flex;
   margin-bottom: 34px;
@@ -225,20 +175,6 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-/*Размещение Иконок в Наших преимуществах*/
-/*.item.benefits::before {
-  display: block;
-  content: '';
-  height: 120px;
-
-  margin-bottom: 30px;
-
-  background-color: #f5f4fa;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-*/
 /* Класс на цвет логотипа*/
 .logo {
   color: var(--accent-color);
@@ -257,16 +193,6 @@ ul {
   color: var(--white-color);
 }
 
-/* Класс убирает точки в начале списка*/
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-/* Убирает подчеркивание у ссылок*/
-.link {
-  text-decoration: none;
-}
 .link.post {
   color: inherit;
   transition: box-shadow 250ms var(--timing-function);
@@ -276,85 +202,6 @@ ul {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-/* ======================
-========Site nav==========*/
-.site-nav {
-  display: flex;
-  margin-left: 93px;
-
-  font-weight: 500;
-  /*font-size: 14px;*/
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-/*Отступ между пунктами списка в навигации 50px.кроме последнего*/
-/*.site-nav .item:not(:last-child) {
-  margin-right: 50px;
-}*/
-.site-nav .item + .item {
-  margin-left: 50px;
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--accent-color);
-}
-.site-nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: var(--title-text-color);
-
-  transition: color 250ms var(--timing-function);
-}
-/* Нижние подчеркивание текущей страницы*/
-
-.link.current:after {
-  content: '';
-
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  display: block;
-  width: 100%;
-  height: 4px;
-
-  background-color: var(--accent-color);
-  border-radius: 2px;
-}
-
-/*Добавление эффекта на ссылки навигации*/
-.site-nav .link.next {
-  position: relative;
-}
-.link.next::after {
-  content: '';
-
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  display: block;
-  width: 100%;
-  height: 4px;
-
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  transform: scaleX(0);
-  transition: transform 250ms var(--timing-function);
-}
-.link.next:hover::after {
-  transform: scaleX(1);
-}
-
-/* Подсветка текущей страницы*/
-.site-nav .link.current {
-  color: var(--accent-color);
-  position: relative;
-}
-
 /*============================
 ==============================*/
 /* hero*/
@@ -435,13 +282,7 @@ ul {
   line-height: 1.17;
   text-align: center;
 }
-.clients__title {
-  argin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
+
 .work__title {
   margin-bottom: 50px;
   font-weight: 700;
@@ -525,82 +366,7 @@ ul {
   background-color: var(--accent-color);
   color: var(--white-color);
 }
-/*Задают размеры кнопок фильтра*/
-.button.current.all {
-  min-width: 73px;
-}
-.button.veb {
-  min-width: 128px;
-}
-.button.prog {
-  min-width: 145px;
-}
-.button.dis {
-  min-width: 103px;
-}
-.button.marc {
-  min-width: 130px;
-}
 
-/* Стиль написание шрифта и цвет контактов*/
-.contacts .link {
-  display: flex;
-  align-items: center;
-  font-style: normal;
-  color: inherit;
-  /*var(--primary-text-color);*/
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: var(--primary-text-color);
-
-  transition: color 250ms var(--timing-function);
-}
-/*Задает контакты в линию*/
-
-.contacts.list {
-  display: flex;
-  margin-left: auto;
-}
-/*Задает отступы сверху и снизу для контактов*/
-/*.contacts.list .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}*/
-.contacts .item + .item {
-  margin-left: 50px;
-}
-.contacts-sup .link {
-  color: var(--contacts-sup-color);
-  font-style: normal;
-  /*font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;*/
-
-  transition: color 250ms var(--timing-function);
-}
-.contacts .link:hover,
-.contacts .link:focus {
-  color: var(--accent-color);
-}
-.contacts-sup .link:hover,
-.contacts-sup .link:focus {
-  color: var(--accent-color);
-}
-
-/* Цвет текста места расположение студии*/
-.location.link {
-  color: var(--white-color);
-  /*font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;*/
-}
 /*Border headera на странице портфолио*/
 .section-header.border {
   border-bottom: 1px solid var(--header-border-color);
@@ -613,34 +379,11 @@ ul {
 .section.team {
   background-color: var(--second-white-color);
 }
-/*Цвет footer*/
-.section.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  background-color: var(--footer-color);
-}
-
-.flex.footer {
-  display: flex;
-  align-items: baseline;
-}
-
 .social-link {
   margin-left: 70px;
   min-width: 206px;
 }
 
-/*Иконки конверта и телефона*/
-
-.icon-envelope {
-  fill: currentColor;
-  margin-right: 10px;
-}
-.icon-smartphone {
-  fill: currentColor;
-  margin-right: 10px;
-}
 /*Иконки в наших приемуществах*/
 .benefits__icon {
   background-color: var(--second-white-color);
