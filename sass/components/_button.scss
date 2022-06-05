@@ -49,3 +49,11 @@
     background-color: $button-primary-hover-color;
   }
 }
+
+/*Задает цвет выделенной кнопки фильтра*/
+
+.list {
+  & .button.current {
+  background-color: $accent-color;
+  color: $white-color;}
+}

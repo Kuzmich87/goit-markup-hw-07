@@ -12,6 +12,6 @@
 /* Цвет текста места расположение студии*/
 .location {
   &.link {
-    color: var(--white-color);
+    color: $white-color;
   }
 }

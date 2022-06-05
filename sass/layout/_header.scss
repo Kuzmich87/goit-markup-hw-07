@@ -7,5 +7,5 @@
 /*Border headera на странице портфолио*/
 .section {
   &-header.border {
-  border-bottom: 1px solid var(--header-border-color);}
+  border-bottom: 1px solid $header-border-color;}
 }
