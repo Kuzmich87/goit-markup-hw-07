@@ -70,8 +70,8 @@
     padding-left: 12px;
   }
   &-policity-terms {
-  color: $accent-color;
-}
+    color: $accent-color;
+  }
 }
 .textarea {
   display: block;
@@ -127,12 +127,12 @@
     justify-content: center;
     margin-right: 7px;
 
-    outline: 2px solid var(--title-text-color);
+    outline: 2px solid $title-text-color;
     outline-offset: -2px;
     border-radius: 2px;
 
     background-color: transparent;
-    transition: background-color 250ms var(--timing-function);
+    transition: background-color $transition-timing $timing-function;
   }
   &-checkbox-icon {
     opacity: 0;
