@@ -1,4 +1,4 @@
-.benefits {
+.benefits-section {
   &__title {
     color: $title-text-color;
     font-weight: 700;
@@ -24,14 +24,14 @@
   }
 
   /*Задает размер поля для текста в Наши преимущества*/
-  &__list .benefits__item {
+  &__list .benefits-section__item {
     width: 270px;
   }
   /*Задает расположение на раздел Наши преимущества*/
   &__list {
     display: flex;
   }
-  &__list .benefits__item + .benefits__item {
+  &__list .benefits-section__item + .benefits-section__item {
     margin-left: 30px;
   }
   /*Иконки в наших приемуществах*/
